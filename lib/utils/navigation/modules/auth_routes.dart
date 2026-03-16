@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../features/global/sign_in/view/sign_in.dart';
 import '../../../features/global/splash/view/splash_screen.dart';
 import '../app_routes.dart';
 import '../route_config.dart';
@@ -23,6 +24,7 @@ class AuthRouteModule extends RouteModule {
     GoRoute(
       path: AuthRoutes.signin,
       name: 'signin',
+      builder: (context, state) => const SignInScreen(),
       // pageBuilder: (context, state) {
       //   Get.lazyPut<SigninController>(() => SigninController());
       //   return RouteTransitions.fade(const SignInScreen());
