@@ -7,22 +7,20 @@ import '../constants/local_storage_key_strings.dart';
 import '../misc/logger_service.dart';
 import 'app_routes.dart';
 import 'modules/auth_routes.dart';
+import 'modules/dashboard_routes.dart';
 import 'modules/profile_routes.dart';
 import 'route_config.dart';
-import 'service/app_state_service.dart';
 
 /// Main application router
 /// This class orchestrates all route modules and provides centralized routing configuration
 class AppRouter {
-  late AppStateService appStateService;
 
-  AppRouter(this.appStateService);
 
   /// All route modules registered in the application
   /// Add new modules here as your app grows
   late final List<RouteModule> _modules = [
     AuthRouteModule(),
-    // DashboardRouteModule(),
+    DashboardRouteModule(),
     // JobRouteModule(),
    
     ProfileRouteModule(),
@@ -71,7 +69,7 @@ class AppRouter {
     initialLocation: AuthRoutes.splash,
     debugLogDiagnostics: true,
     routerNeglect: true,
-    refreshListenable: appStateService,
+    // refreshListenable: appStateService,
     redirect: _handleRedirect,
     routes: _allRoutes,
     errorBuilder: _errorBuilder,
@@ -79,21 +77,21 @@ class AppRouter {
 
   /// Global redirect handler for authentication and authorization
   String? _handleRedirect(BuildContext context, GoRouterState state) {
-    final currentPath = state.uri.path;
-    final isLoggedIn = appStateService.isLoggedIn;
+    // final currentPath = state.uri.path;
+    // final isLoggedIn = appStateService.isLoggedIn;
 
     // Check if route requires authentication
-    final requiresAuth = AppRoutes.requiresAuth(currentPath);
+    // final requiresAuth = AppRoutes.requiresAuth(currentPath);
 
     // Redirect to splash if not logged in and trying to access protected route
-    if (!isLoggedIn && currentPath != AuthRoutes.splash && requiresAuth) {
-      return AuthRoutes.splash;
-    }
+    // if (!isLoggedIn && currentPath != AuthRoutes.splash && requiresAuth) {
+    //   return AuthRoutes.splash;
+    // }
 
     // Redirect to dashboard if logged in and on splash
-    if (isLoggedIn && currentPath == AuthRoutes.splash) {
-      return DashboardRoutes.dashboard;
-    }
+    // if (isLoggedIn && currentPath == AuthRoutes.splash) {
+    //   return DashboardRoutes.dashboard;
+    // }
 
     return null;
   }

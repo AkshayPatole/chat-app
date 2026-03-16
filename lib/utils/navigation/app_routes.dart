@@ -42,28 +42,6 @@ class DashboardRoutes {
   static const String activityDetails = '/dashboard/activity-details';
 }
 
-/// Candidate management routes
-class CandidateRoutes {
-  CandidateRoutes._();
-
-  static const String list = '/candidates';
-  static const String details = '/candidates/details';
-  static const String create = '/candidates/create';
-  static const String edit = '/candidates/edit';
-  static const String gettingStarted = '/candidates/getting-started';
-  static const String basicDetails = '/candidates/basic-details';
-  static const String credentialDetails = '/candidates/credential-details';
-}
-
-/// Invoice routes
-class InvoiceRoutes {
-  InvoiceRoutes._();
-
-  static const String list = '/invoices';
-  static const String details = '/invoices/details';
-  static const String consolidated = '/invoices/consolidated';
-  static const String consolidatedDetails = '/invoices/consolidated/details';
-}
 
 /// Expense routes
 class ExpenseRoutes {
@@ -78,16 +56,6 @@ class ExpenseRoutes {
   static const String historyDetails = '/expenses/history/details';
   static const String billing = '/expenses/billing';
   static const String addExpense = '/expenses/add-expense';
-}
-
-/// Statement of Work (SOW) routes
-class SowRoutes {
-  SowRoutes._();
-
-  static const String list = '/sow';
-  static const String details = '/sow/details';
-  static const String create = '/sow/create';
-  static const String edit = '/sow/edit';
 }
 
 /// Main AppRoutes class that aggregates all routes
@@ -153,37 +121,8 @@ class AppRoutes {
   /// @deprecated Use AppRoutes.dashboard.eventDetails instead
   static const String dashboardEventDetailScreen = DashboardRoutes.eventDetails;
 
-  /// @deprecated Use AppRoutes.candidates.list instead
-  static const String candidateScreen = CandidateRoutes.list;
-
-  /// @deprecated Use AppRoutes.candidates.create instead
-  static const String createCandidateScreen = CandidateRoutes.create;
-
-  /// @deprecated Use AppRoutes.candidates.details instead
-  static const String candidateDetailsScreen = CandidateRoutes.details;
-
-  /// @deprecated Use AppRoutes.invoices.list instead
-  static const String invoiceListScreen = InvoiceRoutes.list;
-
-  /// @deprecated Use AppRoutes.invoices.details instead
-  static const String invoiceDetailsScreen = InvoiceRoutes.details;
-
-  /// @deprecated Use AppRoutes.invoices.consolidated instead
-  static const String consolidatedInvoiceListScreen =
-      InvoiceRoutes.consolidated;
-
-  /// @deprecated Use AppRoutes.invoices.consolidatedDetails instead
-  static const String consolidatedInvoiceDetailsScreen =
-      InvoiceRoutes.consolidatedDetails;
-
   /// @deprecated Use AppRoutes.expenses.list instead
   static const String expenceListingScreen = ExpenseRoutes.list;
-
-  /// @deprecated Use AppRoutes.sow.list instead
-  static const String sowListingScreen = SowRoutes.list;
-
-  /// @deprecated Use AppRoutes.sow.details instead
-  static const String sowDetailsScreen = SowRoutes.details;
 
   /// @deprecated Use AppRoutes.sow.details instead
   static const String expanseDetailsScreen = ExpenseRoutes.details;

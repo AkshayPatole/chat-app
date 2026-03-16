@@ -19,7 +19,7 @@ class AppColors {
   static const Color cultured = Color(0xffF5F5F5);
   static const Color orangeColor = Color(0xFFF97316);
   static const Color orangeLight = Color(0xFFFFF7ED);
-  static const Color sky = Color(0xFF0284C7);  
+  static const Color sky = Color(0xFF0284C7);
   static const Color pinkColor1 = Color(0xFFEC4899);
   static const Color veryLightLavender = Color(0xFFFCF9FF);
   static const Color lightMintGreen = Color(0xFFDCFCE7);
@@ -41,7 +41,10 @@ class AppColors {
   static const Color lightCyan = Color.fromARGB(255, 231, 255, 254);
   static const Color lightPeriwinkle = Color.fromARGB(255, 231, 229, 255);
   static const Color bottomNavigationBarColor = Color(0xff081280);
-
+  static const Color cyanDark = Color(0xFF00A884);
+  static const Color unselectedItemColor = Color(0xFF8696A0);
+  static const Color cyanMedium = Color(0xFF2A3942);
+  static const Color searchBarBackground = Color(0xFF8696A0);
   static const Color redColorDark = Color(0xffFF3141);
   static const Color lightGreyColor = Color(0xFFD9D9D9);
   static const Color disabledForegroundColor = Color(0xffBCBCBC);
@@ -158,7 +161,7 @@ class AppColors {
 
   static const Color antiguaSunriseColor = Color(0xFFFFE7C9);
   static const Color brightBlueVioletColor = Color(0xFF9333EA);
-  static const Color  orangealiciousColor = Color(0xFFEA580C);
+  static const Color orangealiciousColor = Color(0xFFEA580C);
   static const Color portlandOrangeColor = Color(0xFFFF6430);
   static const Color pumpkinColor = Color(0xFFF97316);
   static const Color veryPaleYellowColor = Color(0xFFFEF9C3);
